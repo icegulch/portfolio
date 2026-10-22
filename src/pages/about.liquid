@@ -1,0 +1,32 @@
+---
+permalink: "/about/index.html"
+hikes:
+  - { date: 2025-08-01, trail: Tahoe Rim Trail, note: My favorite hike yet with my ten-year-old son }
+  - { date: 2025-06-01, trail: Colorado Trail, note: "Third-ish time, Durango to Denver (all 500 miles)" }
+  - { date: 2022-10-01, trail: Long Trail, note: "Completed the section hike I started in June 2009: Canada to MA" }
+  - { date: 2020-08-01, trail: Colorado Trail, note: "Over a dozen section hikes with my wife, son, baby daughter, and dog" }
+  - { date: 2019-09-01, trail: Appalachian Trail, note: "Starting in February, completed four section hikes totaling 2,192 miles" }
+  - { date: 2018-07-01, trail: Colorado Trail, note: Not quite a full southbound hike (stopped by fires near Lake City) }
+  - { date: 2017-03-01, trail: "White Mountain Winter 4,000-Footers", note: "All 48 in a single winter season" }
+  - { date: 1998-06-01, trail: "GR20, Corsica", note: France’s toughest long-distance trail }
+  - { date: 1995-08-22, trail: "New England 4,000-Footers", note: "Knocked off the remaining 4,000-Footers in ME and VT" }
+  - { date: 1994-08-18, trail: "White Mountain 4,000-Footers", note: Finished the list I started at age five }
+---
+<section class="wrap about">
+  <img class="headshot" src="/.netlify/images?url=/img/at-headshot-square.jpg" alt="Steve Bailey">
+  <div class="about-body">
+    <h1>Outside of work</h1>
+    <div class="prose">I walk and run on soft ground.</div>
+    <ol class="timeline" role="list">
+      {%- for h in hikes %}
+      <li class="tl-row">
+        <time class="when" datetime="{{ h.date }}">{{ h.date | date: '%b %Y', 0 }}</time>
+        <div>
+          <strong>{{ h.trail }}</strong>
+          <span>{{ h.note }}</span>
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>

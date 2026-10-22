@@ -1,0 +1,27 @@
+{%- assign client = clients[p.data.client] -%}
+{%- assign cover = p.data.cover -%}
+<li>
+  <article class="card">
+    <div class="card-media"{% if cover.bg %} style="background: {{ cover.bg }}"{% endif %}>
+      {%- if cover.src %}
+      <img src="/optim/card{{ cover.src }}" alt="" width="800" height="500" loading="lazy"
+          {%- if cover.fit %} style="object-fit: {{ cover.fit }}"{% endif %}>
+      {%- elsif cover.video %}
+      <img src="/media/w_800,h_500,c_fill,pg_1,q_auto/{{ cover.video }}.webp" alt="" width="800" height="500" loading="lazy">
+      {%- endif %}
+
+      {%- if client.logo %}
+      <span class="logo-badge">{% include "logo.liquid", logo: client.logo %}</span>
+      {%- endif %}
+    </div>
+
+    <div class="card-body">
+      <h3 class="card-title"><a href="{{ p.url }}">{{ p.data.title }}</a></h3>
+      <p class="client">{{ client.name | default: p.data.client }}</p>
+      <p class="card-sub">{{ p.data.sub }}</p>
+      <ul class="chips" role="list">
+        {%- for c in p.data.chips %}<li class="chip">{{ c }}</li>{% endfor %}
+      </ul>
+    </div>
+  </article>
+</li>

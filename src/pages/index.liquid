@@ -1,0 +1,46 @@
+---
+permalink: /
+---
+<section class="wrap hero">
+  <h1>
+    <span class="line">I help teams</span> <span class="line">tell their stories</span> <span class="line">clearly <span class="amp">&amp;</span> creatively.</span>
+  </h1>
+  <div class="hero-side">
+    <p>For two decades, I’ve helped good stories find their audience: CU Boulder faculty sharing their research, FEMA engineers demystifying flood insurance, technology pioneers passing on hard-won lessons, and Car Talk donors explaining why their cars have names.</p>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="projects">
+  <h2 class="section-head" id="projects">Featured projects</h2>
+  <ul class="cards" role="list">
+    {%- for p in collections.projects %}
+      {% include "card.liquid", p: p %}
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="wrap" aria-labelledby="samples">
+  <h2 class="section-head" id="samples">Samples</h2>
+  <ul class="rows" role="list">
+    {%- for p in collections.samples %}
+      {% include "row.liquid", p: p %}
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="wrap" aria-labelledby="what-i-do">
+  <h2 class="section-head" id="what-i-do">What I do</h2>
+  <ul class="tiles" role="list">
+    <li class="tile"><h3>Storytelling &amp; strategy</h3><p>Donor stories, partner campaigns, awards programs, and plain-language translation of technical material for broad audiences.</p></li>
+    <li class="tile"><h3>Digital platforms</h3><p>Web publishing via GitHub and Netlify, using a variety of content management systems. Accessibility and search considered from the start.</p></li>
+    <li class="tile"><h3>Multimedia</h3><p>Video series, photography, audio, and newsletters, produced in Adobe Creative Cloud.</p></li>
+    <li class="tile"><h3>Events &amp; print</h3><p>Six years of conference production, from websites and registration to signage, programs, and swag.</p></li>
+  </ul>
+</section>
+
+<script>
+  // Pause autoplay videos for people who prefer reduced motion
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('video[autoplay]').forEach((v) => v.pause());
+  }
+</script>

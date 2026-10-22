@@ -1,0 +1,9 @@
+{
+  "fema":       { "name": "FEMA",        "logo": { "id": "logo-fema",       "w": 84.6,  "h": 30,   "wordmark": true } },
+  "cartalk":    { "name": "Car Talk",    "logo": { "id": "logo-cartalk",    "w": 53.8,  "h": 32,   "wordmark": true } },
+  "bigboulder": { "name": "Big Boulder", "logo": { "id": "logo-bigboulder", "w": 78.4,  "h": 30,   "wordmark": true } },
+  "brio":       { "name": "With Brio",   "logo": { "id": "logo-brio",       "w": 139.5, "h": 28,   "wordmark": true } },
+  "heavybit":   { "name": "Heavybit",    "logo": { "id": "logo-heavybit",   "w": 150,   "h": 28.3, "wordmark": true } },
+  "cu-boulder": { "name": "CU Boulder",  "logo": { "id": "logo-cu-boulder", "w": 35.3,  "h": 34 } },
+  "mwobs":      { "name": "Mount Washington Observatory", "logo": { "id": "logo-mwobs", "w": 33.7, "h": 34 } }
+}

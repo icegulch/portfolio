@@ -1,0 +1,7 @@
+{%- comment -%}
+  Client logo from the client-logos.svg sprite.
+  Usage: {% include "logo.liquid", logo: client.logo %}
+{%- endcomment -%}
+{%- if logo.id -%}
+<svg class="client-logo" width="{{ logo.w }}" height="{{ logo.h }}" aria-hidden="true" focusable="false"><use href="#{{ logo.id }}"/></svg>
+{%- endif -%}

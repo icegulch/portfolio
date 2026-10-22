@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
+    <meta name="description" content="{{ sub | default: site.description }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&family=Roboto+Condensed:wght@500;600&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&text=%26creativ&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/site.css">
+  </head>
+  <body>
+    {% include "svg-sprite.svg" %}
+    <header class="site-header">
+      <div class="wrap bar">
+        <a class="brand" href="/">{{ site.name }}</a>
+        <nav>
+          {%- for n in site.nav -%}
+            {%- assign active = false -%}
+            {%- if page.url == n.url -%}{%- assign active = true -%}{%- endif -%}
+            {%- if n.url == "/" and page.url contains "/work/" -%}{%- assign active = true -%}{%- endif -%}
+            <a href="{{ n.url }}"{% if active %} aria-current="page"{% endif %}>{{ n.label }}</a>
+          {%- endfor -%}
+        </nav>
+      </div>
+    </header>
+    <main>
+    {{ content }}
+    </main>
+    <footer class="site-footer">
+      <div class="wrap bar">
+        <ul class="footer-links" role="list">
+          <li>
+            <a href="/contact/">
+              <svg width="22" height="22" aria-hidden="true" focusable="false"><use href="#icon-mail"/></svg>
+              <span class="visually-hidden">Contact</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/YOUR-USERNAME/YOUR-REPO">
+              <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#icon-github"/></svg>
+              <span class="visually-hidden">GitHub</span>
+            </a>
+          </li>
+        </ul>
+        <p class="credit">Built with 11ty, versioned on GitHub, deployed via Netlify</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+{%- assign client = clients[p.data.client] -%}
+{%- assign cover = p.data.cover -%}
+{%- assign href = p.data.external | default: p.url -%}
+<li>
+  <article class="row">
+    <img class="row-thumb" src="/optim/thumb{{ cover.src }}" alt="" width="336" height="210" loading="lazy"
+         {%- if cover.fit or cover.bg %} style="{% if cover.fit %}object-fit: {{ cover.fit }};{% endif %}{% if cover.bg %} background: {{ cover.bg }};{% endif %}"{% endif %}>
+    <div class="row-text">
+      <h3 class="row-title">
+        <a href="{{ href }}">
+          {{- p.data.title -}}
+          {%- if p.data.external %}<span class="visually-hidden"> (opens {{ client.name | default: "another site" }})</span>{% endif -%}
+        </a>
+      </h3>
+      <p class="kicker">{{ client.name | default: p.data.client }}{% if p.data.kind %} · {{ p.data.kind }}{% endif %}</p>
+      <p class="row-sub">{{ p.data.sub }}</p>
+      {%- if p.data.note %}
+      <p class="row-note">{{ p.data.note }}</p>
+      {%- endif %}
+    </div>
+    <span class="cta" aria-hidden="true">
+      {%- if p.data.external and p.data.youtube %}Watch ↗
+      {%- elsif p.data.external %}Visit ↗
+      {%- elsif p.data.youtube %}Watch →
+      {%- else %}Read →{% endif -%}
+    </span>
+  </article>
+</li>

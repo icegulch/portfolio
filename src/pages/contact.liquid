@@ -1,0 +1,30 @@
+---
+permalink: /contact/
+---
+<section class="wrap">
+  <header class="case-head">
+    <h1>Get in touch</h1>
+    <p>I’d be glad to hear from you.</p>
+  </header>
+
+  <form class="contact-form" name="contact" method="POST" action="/thanks/"
+        data-netlify="true" netlify-honeypot="bot-field">
+
+    <p class="visually-hidden" aria-hidden="true">
+      <label>Leave this blank
+        <input name="bot-field" tabindex="-1" autocomplete="off">
+      </label>
+    </p>
+
+    <label for="name">Name</label>
+    <input id="name" name="name" autocomplete="name" required>
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" autocomplete="email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button class="btn" type="submit">Send message</button>
+  </form>
+</section>

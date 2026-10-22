@@ -1,0 +1,82 @@
+---
+layout: base.liquid
+---
+{%- assign c = clients[client] -%}
+<article class="wrap case">
+  <a class="back" href="/">← All work</a>
+
+  <header class="case-head">
+    <p class="client">
+      {%- if c.logo %}{% include "logo.liquid", logo: c.logo %}{% endif -%}
+      {%- if c.logo.wordmark -%}
+        <span class="visually-hidden">{{ c.name }}</span>
+      {%- else -%}
+        <span>{{ c.name | default: client }}</span>
+      {%- endif -%}
+    </p>
+    <h1>{{ title }}</h1>
+  </header>
+
+  {%- if cover.video %}
+  <figure class="hero-img">
+    <video autoplay muted loop playsinline aria-hidden="true" width="1600" height="900"
+          poster="{% if cover.src %}/optim/wide{{ cover.src }}{% else %}/video/w_1600,so_0,q_auto/{{ cover.video }}.webp{% endif %}">
+      <source src="/video/w_1600,vc_h265,q_auto/{{ cover.video }}.mp4" type='video/mp4; codecs="hvc1"'>
+      <source src="/video/w_1600,vc_vp9,q_auto/{{ cover.video }}.webm" type="video/webm">
+      <source src="/video/w_1600,vc_h264,q_auto/{{ cover.video }}.mp4" type="video/mp4">
+    </video>
+    {%- if cover.caption %}<figcaption>{{ cover.caption }}</figcaption>{% endif %}
+  </figure>
+
+  {%- elsif cover.src %}
+  <figure class="hero-img">
+    <img src="/optim/wide{{ cover.src }}" alt="{{ cover.alt }}" width="2128" height="1040"
+        loading="eager" fetchpriority="high"
+        {%- if cover.fit or cover.bg %} style="{% if cover.fit %}object-fit: {{ cover.fit }};{% endif %}{% if cover.bg %} background: {{ cover.bg }};{% endif %}"{% endif %}>
+    {%- if cover.caption %}<figcaption>{{ cover.caption }}</figcaption>{% endif %}
+  </figure>
+  {%- endif %}
+
+  <div class="case-grid">
+    <aside class="glance" aria-label="At a glance">
+      <dl class="facts">
+        {%- for f in facts %}
+        <div class="fact"><dt>{{ f.k }}</dt><dd>{{ f.v }}</dd></div>
+        {%- endfor %}
+        {%- if link.url != blank %}
+        <div class="fact"><dt>Live</dt><dd><a href="{{ link.url }}">{{ link.label }}&nbsp;↗</a></dd></div>
+        {%- endif %}
+      </dl>
+    </aside>
+
+    <div class="prose">
+      {{ content }}
+
+      {%- assign prev = collections.work | getPreviousCollectionItem: page -%}
+      {%- assign next = collections.work | getNextCollectionItem: page -%}
+      <nav class="pager" aria-label="More work">
+        {% if prev %}
+          <a href="{{ prev.url }}" rel="prev">← {{ clients[prev.data.client].name }}: {{ prev.data.title }}</a>
+        {% else %}
+          <a href="/">← All work</a>
+        {% endif %}
+
+        {% if next %}
+          <a class="next" href="{{ next.url }}" rel="next">{{ clients[next.data.client].name }}: {{ next.data.title }} →</a>
+        {% else %}
+          <a class="next" href="/">All work →</a>
+        {% endif %}
+      </nav>
+    </div>
+  </div>
+</article>
+
+<script defer>
+  document.querySelectorAll(".compare").forEach((fig) => {
+    const range = fig.querySelector(".compare-range");
+    const update = () => fig.style.setProperty("--pos", `${range.value}%`);
+    range.addEventListener("input", update);
+    update();
+  });
+</script>
+

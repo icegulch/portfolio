@@ -1,0 +1,67 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+# Keep the whole site (pages, images, PDFs) out of search results and caches.
+# Don't also block Googlebot in robots.txt: a crawler that can't fetch a page
+# never sees this header, and the URL can still show up in results.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet, noimageindex"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+
+
+# Image presets via Netlify Image CDN (format chosen automatically)
+
+[[redirects]]
+  from = "/optim/card/*"            # showcase cards, 16:10
+  to = "/.netlify/images?url=/:splat&w=800&h=500&fit=cover&fm=webp"
+  status = 200
+
+[[redirects]]
+  from = "/optim/thumb/*"           # writing rows, 168px wide, 16:10
+  to = "/.netlify/images?url=/:splat&w=336&h=210&fit=cover&fm=webp"
+  status = 200
+
+[[redirects]]
+  from = "/optim/headshot/*"        # About page, 4:5
+  to = "/.netlify/images?url=/:splat&w=800&h=1000&fit=cover&fm=webp"
+  status = 200
+
+[[redirects]]
+  from = "/optim/wide/*"            # case-study hero, ~1064 × 520
+  to = "/.netlify/images?url=/:splat&w=2128&h=1040&fit=cover&fm=webp"
+  status = 200
+
+[[redirects]]
+  from = "/optim/article/*"         # in-body figures, prose column 680px, no crop
+  to = "/.netlify/images?url=/:splat&w=1360&fm=webp"
+  status = 200
+
+[[redirects]]
+  from = "/video/:transform/*"
+  to = "https://res.cloudinary.com/diqtp88wv/video/upload/:transform/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/.netlify/images?url=/img/favicon.png&w=32&h=32&fm=png"
+  status = 200
+
+[[redirects]]
+  from = "/favicon-32.png"
+  to = "/.netlify/images?url=/img/favicon.png&w=32&h=32&fit=cover&fm=png"
+  status = 200
+
+[[redirects]]
+  from = "/favicon-192.png"
+  to = "/.netlify/images?url=/img/favicon.png&w=192&h=192&fit=cover&fm=png"
+  status = 200
+
+[[redirects]]
+  from = "/apple-touch-icon.png"
+  to = "/.netlify/images?url=/img/favicon.png&w=180&h=180&fit=cover&fm=png"
+  status = 200
