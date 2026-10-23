@@ -6,7 +6,7 @@ chips: [Events, Conference materials, Signage]
 order: 4
 tags: [project]
 cover:
-  src: /img/bb-flask.png
+  src: /img/big-boulder-flask.jpg
   alt: Big Boulder branded SXSW whiskey flask
   caption: Six years, four web platforms, one annual conference — and yes, the whiskey flask.
 facts:
@@ -48,18 +48,23 @@ A consistent visual language — typography, color, iconography — became the c
 
 ## Print, signage, and swag
 
-Every year, Big Boulder also meant a full suite of print materials — programs, brochures, signage, and branded swag — all designed to feel like extensions of that year's visual identity, not afterthoughts.
-
 <figure>
-  <img src="https://res.cloudinary.com/diqtp88wv/image/upload/f_auto,q_auto/bigboulder_cknba5.jpg" alt="Massive steel sign for the event" width="1200" height="800" loading="lazy">
-  <figcaption>Massive steel sign for the event.</figcaption>
+  <img src="/optim/article/img/big-boulder-swag.jpg" alt="Brochures, lanyards, stickers, and more swag for the conference" width="721" height="541" loading="lazy">
+  <figcaption>The conference brochure, lanyard, stickers, and more.</figcaption>
 </figure>
+
+Every year, Big Boulder also meant a full suite of print materials — programs, brochures, signage, and branded swag — all designed to feel like extensions of that year's visual identity, not afterthoughts.
 
 Conference swag extended beyond the expected. For SXSW, we produced a branded whiskey flask (shown at the top of this page) — the kind of thing that actually makes it home from a conference bag, gets used, and keeps the brand alive long after the event ends.
 
 Each year's print suite had to be designed, produced, and delivered under hard deadlines — vendor coordination, print specs, shipping logistics, and proofing all happening in parallel with the web and registration work. Across digital, print, and registration — no one piece existed in isolation. Everything shipped together or nothing worked.
 
 ## All good things&hellip;
+
+<figure>
+  <img src="/optim/article/img/big-boulder-event.jpg" alt="Panel discussion at the 2015 conference" width="4000" height="1871" loading="lazy">
+  <figcaption>The conference produced six years of engaging discussions about big data.</figcaption>
+</figure>
 
 When Twitter wound down the conference's registration services in 2018, that work fell to me too — by then, I knew where everything lived.
 
