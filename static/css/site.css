@@ -913,6 +913,15 @@ figcaption {
   & .next {
     text-align: right;
   }
+
+  @media (max-width: 560px) {
+    flex-direction: column;
+    gap: 12px;
+
+    & .next {
+      align-self: flex-end;   /* keep "next" on the right, under "previous" */
+    }
+  }
 }
 
 
