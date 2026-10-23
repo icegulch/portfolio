@@ -36,7 +36,7 @@ I started by interviewing our partnership team and several NPR stations to map o
 - **Ownership:** a store the partnership team could run themselves, with tracking to show whether it was working
 
 ### Previews without giving the store away
-Cloudinary watermarks graphics, truncates audio, and thumbnails documents on first request. Nobody touches a file, and the back catalog came along for free.
+Cloudinary watermarks graphics, truncates audio, and thumbnails documents on first request. Nobody touches a file, and the existing library got previews for free..
 
 <figure><img src="/optim/article/img/ctvdp-hanks.png" alt="Previews are watermarked automatically" loading="lazy"><figcaption>Previews are watermarked automatically.</figcaption></figure>
 

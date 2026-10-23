@@ -2,7 +2,7 @@
 title: Podcast & Video Library
 client: heavybit
 sub: Redesigning a content repository to elevate the speakers, podcasts, and videos from Heavybit’s developer speaker series.
-chips: [UX design, Content strategy, CMS migratio]
+chips: [UX design, Content strategy, CMS migration]
 order: 5
 tags: [project]
 cover:
