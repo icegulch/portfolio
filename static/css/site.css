@@ -303,7 +303,7 @@ img {
     }
 
     & .amp {
-      font-family: 'Libre Baskerville', serif;
+      font-family: Baskerville, 'Libre Baskerville', serif;
       font-style: italic;
       font-weight: 400;
       color: var(--accent);
