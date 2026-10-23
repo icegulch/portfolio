@@ -12,6 +12,9 @@
     "packageJson": {
       "dependencies": [
         "npm:@11ty/eleventy@^3.1.7",
+        "npm:@fontsource/roboto-condensed@^5.3.0",
+        "npm:@fontsource/roboto-mono@^5.3.0",
+        "npm:@fontsource/roboto@^5.3.0",
         "npm:html-minifier-terser@^7.2.0"
       ]
     }

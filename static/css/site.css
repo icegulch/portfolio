@@ -20,6 +20,79 @@
 }
 
 
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("/fonts/roboto-mono-500.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("/fonts/roboto-condensed-500.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+/* Body: Roboto */
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/roboto-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/roboto-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/roboto-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Headings: Roboto Condensed */
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("/fonts/roboto-condensed-500.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("/fonts/roboto-condensed-600.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+/* Chips, eyebrows, dates: Roboto Mono */
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("/fonts/roboto-mono-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* The ampersand (and "creative"): Libre Baskerville italic subset */
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("/fonts/baskerville-amp.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+
 /* ==========================================================================
    Base
    ========================================================================== */
@@ -40,7 +113,7 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--ink);
-  font: 17px/1.6 Roboto, sans-serif;
+  font: 300 17px/1.6 Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -230,7 +303,7 @@ img {
     }
 
     & .amp {
-      font-family: Baskerville, 'Libre Baskerville', serif;
+      font-family: 'Libre Baskerville', serif;
       font-style: italic;
       font-weight: 400;
       color: var(--accent);
@@ -572,7 +645,7 @@ img {
 
   & h3 {
     margin: 0 0 8px;
-    font: 600 21px/1.2 var(--cond);
+    font: 500 21px/1.2 var(--cond);
   }
 
   & p {

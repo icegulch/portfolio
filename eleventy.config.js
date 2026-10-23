@@ -2,6 +2,15 @@ import { minify } from "html-minifier-terser";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "static": "/" });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@fontsource/roboto/files/roboto-latin-400-normal.woff2": "fonts/roboto-400.woff2",
+    "node_modules/@fontsource/roboto/files/roboto-latin-400-italic.woff2": "fonts/roboto-400-italic.woff2",
+    "node_modules/@fontsource/roboto/files/roboto-latin-700-normal.woff2": "fonts/roboto-700.woff2",
+    "node_modules/@fontsource/roboto-condensed/files/roboto-condensed-latin-500-normal.woff2": "fonts/roboto-condensed-500.woff2",
+    "node_modules/@fontsource/roboto-condensed/files/roboto-condensed-latin-600-normal.woff2": "fonts/roboto-condensed-600.woff2",
+    "node_modules/@fontsource/roboto-mono/files/roboto-mono-latin-400-normal.woff2": "fonts/roboto-mono-400.woff2",
+  });
+
   const byOrder = (a, b) => (a.data.order ?? 99) - (b.data.order ?? 99);
   const onSite = (p) => !p.data.external;
 
