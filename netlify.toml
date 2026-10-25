@@ -47,6 +47,11 @@
   force = true
 
 [[redirects]]
+  from = "/optim/zoom/*"            # click-to-enlarge, full detail, no crop
+  to = "/.netlify/images?url=/:splat&w=2400&fm=webp"
+  status = 200
+
+[[redirects]]
   from = "/favicon.ico"
   to = "/.netlify/images?url=/img/favicon.png&w=32&h=32&fm=png"
   status = 200

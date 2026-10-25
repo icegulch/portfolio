@@ -1,4 +1,6 @@
 import { minify } from "html-minifier-terser";
+import markdownIt from "markdown-it";
+const md = markdownIt();
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "static": "/" });
@@ -10,6 +12,9 @@ export default function (eleventyConfig) {
     "node_modules/@fontsource/roboto-condensed/files/roboto-condensed-latin-600-normal.woff2": "fonts/roboto-condensed-600.woff2",
     "node_modules/@fontsource/roboto-mono/files/roboto-mono-latin-400-normal.woff2": "fonts/roboto-mono-400.woff2",
   });
+
+  // eleventy.config.js
+  eleventyConfig.addFilter("mdInline", (s) => md.renderInline(s));
 
   const byOrder = (a, b) => (a.data.order ?? 99) - (b.data.order ?? 99);
   const onSite = (p) => !p.data.external;

@@ -9,8 +9,8 @@ cover:
   src: /img/fema-crs.jpg
   alt: Elevation Certificates video title card
 facts:
-  - { k: Role, v: "Content design, technical translation, video production" }
-  - { k: Years, v: "2019&ndash;present" }
+  - { k: Role, v: "Design lead, technical translation, video production" }
+  - { k: Years, v: "2019&ndash;2026" }
   - { k: Formats, v: "Web, Video, Presentation Decks" }
   - { k: Outcome, v: "Contract renewed for five more years" }
 link:
@@ -44,6 +44,8 @@ The fix was disciplined restraint: spotlight primary actions, let secondary and 
 
 In many cases, things that had been buttons were much better suited to being links. The increase in white space also helped to better define the page's content hierarchy: header, navigation, breadcrumbs, and main content.
 
+When we expanded to the administrative side, I brought the same restraint to the specialists’ scorecard, replacing a decades-old Excel matrix with a validated web version that kept the compact layout they relied on.
+
 To make the new hierarchy survive a fast-moving team, I built a living style guide — patterns, components, colors, typography, error states, all in one place.
 
 Developers shipping features or squashing bugs weekly could reference it without pinging me; the style guide did the design coordination work that meetings would have otherwise required.
@@ -58,19 +60,29 @@ While my engineering teammates developed the core interface, I shifted into an i
   <div class="embed-responsive">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/2Ypvm4Ywa8w" title="FEMA CRS Submit Onboarding Video Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
   </div>
-  <figcaption>Onboarding tutorial, updated as we built out the UI.</figcaption>
+  <figcaption>Onboarding tutorial for CRS Submit, re-recorded as the interface evolved.</figcaption>
 </figure>
 
-To ensure compliance with accessibility standards, I established a workflow using YouTube’s auto-captions as a baseline, refining them into precise timestamps and chapter markers within the video documentation.
+The videos caught the attention of regional program managers, who saw a bigger bottleneck: local officials struggled with FEMA's notoriously complex Elevation Certificates. So I wrote and produced [a multi-part series on the certificate](https://www.youtube.com/playlist?list=PLRJw9u8nGNwP8sFZFMCyDqWNR1XnmzkpR), with every script approved by subject-matter experts. Forms don't make for gripping video, so I used motion, reflection, and rotation to guide viewers' attention through dense federal pages one field at a time.
 
-The CRS Submit work eventually grew beyond the core application — half a dozen public-facing documentation sites, data visualization microsites, and style guides followed. FEMA was pleased with the direction, and we were approved to continue work for another five years.
+For accessibility, I used YouTube's auto-captions as a baseline and refined them into accurate, precisely timed captions and chapter markers, as part of maintaining two of the program's YouTube channels.
 
-In late 2025, we started making cross-application content changes, leveraging a headless CMS and cloud storage to make content portable and reusable — from community guide to specialist guide to the application. Our contract had just been renewed for five years, and we were building for the long term.
+The CRS Submit work eventually grew beyond the core application — half a dozen public-facing documentation sites, data visualization microsites, specialist dashboards, and style guides followed. FEMA was pleased with the direction, and we were approved to continue work for another five years.
+
+<figure>
+  <a href="/optim/zoom/img/fema-crs-viz.jpg" class="zoom" aria-label="Enlarge image: CRS visualizations">
+    <img src="/optim/article/img/fema-crs-viz.jpg" alt="CRS Data Visualizations site showing cards for six public Tableau dashboards of CRS metrics (state profiles, participation, classifications, higher regulatory standards, participation over time, and classes over time), with a locked row marking four more dashboards for signed-in users." width="1360" height="1368" loading="lazy">
+    <span class="zoom-badge" aria-hidden="true">⤢ Enlarge</span>
+  </a>
+  <figcaption>Concept for password-protected specialist dashboards, planned for launch before federal funding ended in 2026. <a href="https://crsviz.com">See the working visualizations »</a></figcaption>
+</figure>
+
+In late 2025, building for the long term, we started making cross-application content changes, leveraging a headless CMS and cloud storage to make content portable and reusable — from community guide to specialist guide to the application.
 
 Then in early 2026, federal funding for the program abruptly ended, and the work stopped mid-flight.
 
 ## The working application
 
-Development has stopped, but the application is still in use (credentials required).
+Development has stopped, but the application remains in use (credentials required).
 
 What's left is the work itself: an application still in daily use, a documentation library that survived the wind-down, and a clearer sense of how to translate a complex regulated domain into something people can actually use.
