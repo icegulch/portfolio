@@ -74,7 +74,7 @@ The CRS Submit work eventually grew beyond the core application — half a dozen
     <img src="/optim/article/img/fema-crs-viz.jpg" alt="CRS Data Visualizations site showing cards for six public Tableau dashboards of CRS metrics (state profiles, participation, classifications, higher regulatory standards, participation over time, and classes over time), with a locked row marking four more dashboards for signed-in users." width="1360" height="1368" loading="lazy">
     <span class="zoom-badge" aria-hidden="true">⤢ Enlarge</span>
   </a>
-  <figcaption>Concept for password-protected specialist dashboards, planned for launch before federal funding ended in 2026. <a href="https://crsviz.com">See the working visualizations »</a></figcaption>
+  <figcaption>Concept for password-protected specialist dashboards built on Tableau visualizations, planned for launch before federal funding ended in 2026. <a href="https://crsviz.com">See the working visualizations »</a></figcaption>
 </figure>
 
 In late 2025, building for the long term, we started making cross-application content changes, leveraging a headless CMS and cloud storage to make content portable and reusable — from community guide to specialist guide to the application.

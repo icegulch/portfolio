@@ -11,7 +11,7 @@ cover:
   alt: Car Talk donor in a cape sitting on her pink car
   caption: Happy donor atop her pink “Duck Truck.”
 facts:
-  - { k: Role, v: "Strategy, editorial, and development" }
+  - { k: Role, v: "Project lead: strategy, editorial, and development" }
   - { k: Years, v: "2023&ndash;present" }
   - { k: Outcome, v: "Partner photo requests up; stories recognized in Google’s rich-results reports" }
 link:

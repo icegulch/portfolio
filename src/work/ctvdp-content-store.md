@@ -11,7 +11,7 @@ cover:
   caption: "Out of the vault: Tom Hanks, now a click away for any station."
   bg: "#8a8b8d"
 facts:
-  - { k: Role, v: "Strategy, design, and build" }
+  - { k: Role, v: "Project lead: strategy, design, and build" }
   - { k: Years, v: "2020&ndash;present" }
   - { k: Stack, v: "Cloudinary · Algolia · 11ty · GitHub · Netlify" }
   - { k: Cost, v: "Under $30/month" }
