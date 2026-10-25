@@ -3,8 +3,12 @@
 {%- assign href = p.data.external | default: p.url -%}
 <li>
   <article class="row">
-    <img class="row-thumb" src="/optim/thumb{{ cover.src }}" alt="" width="336" height="210" loading="lazy"
-         {%- if cover.fit or cover.bg %} style="{% if cover.fit %}object-fit: {{ cover.fit }};{% endif %}{% if cover.bg %} background: {{ cover.bg }};{% endif %}"{% endif %}>
+    <img class="row-thumb"
+        src="/optim/thumb{{ cover.src }}"
+        srcset="/optim/thumb{{ cover.src }} 336w, /optim/card{{ cover.src }} 800w"
+        sizes="(max-width: 560px) 100vw, (max-width: 760px) 96px, 168px"
+        alt="" width="336" height="210" loading="lazy"
+        {%- if cover.fit or cover.bg %} style="{% if cover.fit %}object-fit: {{ cover.fit }};{% endif %}{% if cover.bg %} background: {{ cover.bg }};{% endif %}"{% endif %}>
     <div class="row-text">
       <h3 class="row-title">
         <a href="{{ href }}">

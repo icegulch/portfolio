@@ -375,7 +375,7 @@ img {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
   gap: 24px;
 }
 
@@ -560,10 +560,16 @@ img {
   @media (max-width: 760px) {
     grid-template-columns: 96px minmax(0, 1fr);
   }
+  @media (max-width: 560px) {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+  }
 }
 
 .row-thumb {
   display: block;
+  /* width: 100%; */
   max-width: 100%;
   height: auto;
   aspect-ratio: 16 / 10;
