@@ -16,8 +16,19 @@ hikes:
   <img class="headshot" src="/.netlify/images?url=/img/at-headshot-square.jpg" alt="Steve Bailey" width="1280" height="957" loading="eager" fetchpriority="high">
   <div class="about-body">
     <h1>Outside of work</h1>
-    <div class="prose">I walk and run on soft ground.</div>
-    <ol class="timeline" role="list">
+    <div class="prose">
+      <p>I go for long walks.</p>
+      <p>
+        I started New Hampshire’s 4,000-footers at age five, and since then the walks have gotten longer: Corsica’s GR20, the Colorado Trail (more than once), Vermont’s Long Trail, and all 2,192 miles of the Appalachian Trail. My favorite walks are with family, most recently the Tahoe Rim Trail with my ten-year-old son.
+      </p>
+      <p>
+        The trail is also where I stress-test the tools I use for client work. On recent hikes, I’ve built streamlined workflows for sharing photos, video, and audio as engaging narratives. They have to be robust enough to work on spotty connections, yet simple enough so that I stay present on the trail instead of tethered to my phone.
+      </p>
+      <p>
+        I give back to the trails I love through trail work and a share of With Brio’s profits. I also donate imperfect products to groups making the outdoors more welcoming to everyone, with a focus on equal access, addiction recovery, and getting kids outside.
+      </p>
+    </div>
+    {% comment %} <ol class="timeline" role="list">
       {%- for h in hikes %}
       <li class="tl-row">
         <time class="when" datetime="{{ h.date }}">{{ h.date | date: '%b %Y', 0 }}</time>
@@ -27,6 +38,6 @@ hikes:
         </div>
       </li>
       {%- endfor %}
-    </ol>
+    </ol> {% endcomment %}
   </div>
 </section>
