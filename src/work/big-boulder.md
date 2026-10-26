@@ -17,7 +17,7 @@ facts:
 
 ## Leading the big data conversation (Gnip / Twitter)
 
-In 2011, big data wasn't yet a buzzword — it was a genuine frontier, and Gnip was one of the companies helping define it. As a data firehose aggregator (think: the pipes behind Twitter, Tumblr, and dozens of other social platforms), Gnip wanted to convene the people building the data-driven web — engineers, data scientists, product leaders — for an honest, practitioner-focused conversation about where things were headed.
+In 2011, big data wasn't yet a buzzword — it was a genuine frontier, and Gnip was one of the companies helping define it. As a data firehose aggregator (think: the pipes behind Twitter, Facebook, and dozens of other social platforms), Gnip wanted to convene the people building the data-driven web — engineers, data scientists, product leaders — for an honest, practitioner-focused conversation about where things were headed.
 
 Big Boulder Conference was that conversation — held annually in Boulder.
 
@@ -39,7 +39,7 @@ Big Boulder ran on four distinct web properties, each serving a different audien
     <input class="compare-range" type="range" min="0" max="100" value="50"
            aria-label="Compare before and after">
   </div>
-  <figcaption>Drag to compare: Netlify conference website (left) and Tendenci membership site (right).</figcaption>
+  <figcaption>Drag to compare: Netlify conference website (left) and Tendenci membership site (right). The goal: seamlessly connect these disparate web platforms.</figcaption>
 </figure>
 
 The challenge wasn't building any one of them — it was making all four feel like the same conference despite running on completely different stacks, with different constraints, different interaction patterns, and different teams touching each one.
