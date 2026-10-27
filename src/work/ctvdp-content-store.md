@@ -43,6 +43,8 @@ Cloudinary watermarks graphics, truncates audio, and thumbnails documents on fir
 ### Assets people can find the way they think
 Every asset carries two kinds of metadata: what it *is* (format, size, duration) and what it's *for* (kit, season, show). Cloudinary handles the first automatically; tags and structured metadata handle the second. The same JSON feeds Algolia as the search index.
 
+Audio cards now show the clip itself: a Cloudinary-generated waveform that fills as the preview plays, under a custom play button. It gives audio the same at-a-glance visual identity that images and documents already had, and it replaces the browser’s default player, which had invited a few listeners to right-click and save a file they assumed was the original. (It wasn’t: previews are trimmed and lower in quality.)
+
 ### One card for every kind of asset
 Type-aware flags (`hasDimensions`, `hasDuration`, `hasPages`) let a single card show only what matters: dimensions for images, duration for audio, page count for documents.
 
@@ -69,5 +71,3 @@ As with any project, there's always room for improvement:
 
 - **Auto titling**: To batch process exclusive assets for partners, I wrote a script that I run locally from my machine. I'd like to explore Cloudinary Media Flows to make this fully automated.
 - **Atomic search index updates**: Right now, I regenerate the search index every time the site is rebuilt. Index updates should be “atomized”.
-- **Waveform graphics**: I had originally experimented with waveform files to represent audio files. I have a working branch with this enhancement but need to revisit.
-
