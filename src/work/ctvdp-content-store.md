@@ -48,13 +48,6 @@ Audio cards now show the clip itself: a Cloudinary-generated waveform that fills
 ### One card for every kind of asset
 Type-aware flags (`hasDimensions`, `hasDuration`, `hasPages`) let a single card show only what matters: dimensions for images, duration for audio, page count for documents.
 
-### Open to the public, exclusive to partners
-Partners click through from the portal they already use. An encrypted handoff to Netlify Identity's magic link unlocks full access, with no second password. Obfuscated, proxied links keep the good stuff off the open web.
-
-## The result
-
-Existing partners have made dozens of full-access requests since launch, and the whole system runs for under $30 a month.
-
 <figure class="compare" style="--pos: 50%">
   <div class="compare-frame">
     <img src="/optim/article/img/ctvdp-store-before.png" alt="Datatables.js table of media" width="1360" height="358" loading="lazy">
@@ -65,9 +58,9 @@ Existing partners have made dozens of full-access requests since launch, and the
   <figcaption>Drag to compare: the old password-protected table (left) and the open store (right).</figcaption>
 </figure>
 
-## Remaining challenges
+### Open to the public, exclusive to partners
+Partners click through from the portal they already use. An encrypted handoff to Netlify Identity's magic link unlocks full access, with no second password. Obfuscated, proxied links keep the good stuff off the open web.
 
-As with any project, there's always room for improvement:
+## The result
 
-- **Auto titling**: To batch process exclusive assets for partners, I wrote a script that I run locally from my machine. I'd like to explore Cloudinary Media Flows to make this fully automated.
-- **Atomic search index updates**: Right now, I regenerate the search index every time the site is rebuilt. Index updates should be “atomized”.
+Existing partners have made dozens of full-access requests since launch, and the whole system runs for under $30 a month.
